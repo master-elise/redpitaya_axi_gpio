@@ -31,3 +31,7 @@ echo 631 > /sys/class/gpio/export
 echo out > /sys/class/gpio/gpio631/direction
 echo 1 > /sys/class/gpio/gpio631/value
 ```
+
+630-512=118=32+22+32+32
+
+<img src="2026-11-24-160256_2944x1080_scrot.png">
