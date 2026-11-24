@@ -23,4 +23,11 @@ to configure the PL using FPGA Manager.
 ```
 mkdir /sys/kernel/config/device-tree/overlays/myoverlay
 cat devicetree_overlay.dtbo  > /sys/kernel/config/device-tree/overlays/myoverlay/dtbo 
+ls -l /sys/class/gpio # lrwxrwxrwx    1 root     root             0 Jan  1 00:39 gpiochip630
+```
+and to access the various GPIOs
+```
+echo 631 > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio631/direction
+echo 1 > /sys/class/gpio/gpio631/value
 ```
