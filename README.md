@@ -17,3 +17,10 @@ to the RedPitaya ``/lib/firmware`` directory, ``ssh`` to the RedPitaya and
 echo "system_wrapper.bit.bin" > /sys/class/fpga_manager/fpga0/firmware 
 ```
 to configure the PL using FPGA Manager.
+
+# Devicetree overlay
+
+```
+mkdir /sys/kernel/config/device-tree/overlays/myoverlay
+cat devicetree_overlay.dtbo  > /sys/kernel/config/device-tree/overlays/myoverlay/dtbo 
+```

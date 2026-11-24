@@ -1,0 +1,22 @@
+/dts-v1/;  // $BR/dtc -@ -O dtb gpio_overlay.dts -o t.dtbo
+/plugin/;
+/ {
+  fragment@0 {
+    target = <&fpga_full>;
+    #address-cells = <1>;
+    #size-cells = <1>;
+    __overlay__ {
+      #address-cells = <1>;
+      #size-cells = <1>;
+      firmware-name = "design_1_wrapper.bit.bin";
+      axi_gpio_0: gpio@42100000 {
+        #gpio-cells = <2>;
+        compatible = "xlnx,xps-gpio-1.00.a";
+        gpio-controller ;
+        reg = <0x42100000 0x10000>;
+        xlnx,gpio-width = <0x8>;
+       };
+     };
+  };
+};
+
