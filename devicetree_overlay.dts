@@ -8,7 +8,7 @@
     __overlay__ {
       #address-cells = <1>;
       #size-cells = <1>;
-      firmware-name = "design_1_wrapper.bit.bin";
+      firmware-name = "system_wrapper.bit.bin";
       axi_gpio_0: gpio@42100000 {
         #gpio-cells = <2>;
         compatible = "xlnx,xps-gpio-1.00.a";
